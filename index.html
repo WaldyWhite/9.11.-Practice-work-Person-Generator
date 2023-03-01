@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор случайных пользователей</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div class="contain">
+    <div class="box-center">
+        <div class="col-box">
+                <div class="box-header">
+                    <p class="m-0">Окно результатов генерации</p>
+                </div>
+                <div class="img">
+                    <img class="photo" src="placeholder_200.png" alt="Место для фотографий">
+                </div>
+                <div class="box-body">
+                    <div class="ro">
+                        <div class="co">
+                            <h3 class="title">Фамилия: 	&ensp;<span id="surnameOutput"></span></h3>
+                            <h4>Имя:	&ensp;	&ensp;	&ensp; 	&ensp;<span id="firstNameOutput"></span></h4>
+                            <h4>Отчество: 	&ensp;<span id="patronymicOutput"></span></h4>
+                            <p>
+                                <span class="ste">Пол: &ensp;</span><span id="genderOutput"></span>
+                                <br>
+                                <span class="ste">Дата рождения: &ensp;</span><span id="birthYearOutput"></span>
+                                <br>
+                                <span class="ste">Профессия: &ensp;</span><span id="job"></span>
+                                
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="button">
+                    <button class="btn gener">generate</button>
+                    <button class="btn clear"> clear</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="personGenerator.js"></script>
+<script src="init.js"></script>
+</body>
+</html>
