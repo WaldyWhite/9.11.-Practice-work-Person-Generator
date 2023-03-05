@@ -1,4 +1,7 @@
 // generate
+window.onload = init;
+function init () {
+
 const comma = ' ,'
     document.querySelector('.gener').addEventListener('click', function() {
         const initPerson = personGenerator.getPerson();
@@ -20,3 +23,4 @@ const comma = ' ,'
         document.querySelector('#job').textContent = '';
         document.querySelector('.photo').src = 'placeholder_200.png'
          });
+        }

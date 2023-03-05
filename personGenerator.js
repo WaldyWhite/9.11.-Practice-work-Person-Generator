@@ -55,23 +55,21 @@ const personGenerator = {
     monthJson: `{
         "count": 12,
         "list": {     
-            "id_1": "Январь 31",
-            "id_2": "Февраль 28",
-            "id_3": "Март 31",
-            "id_4": "Апрель 30",
-            "id_5": "Май 31",
-            "id_6": "Июнь 30",
-            "id_7": "Июль 31",
-            "id_8": "Август 31",
-            "id_9": "Сентябрь 30",
-            "id_10": "Октябрь 31",
-            "id_11": "Ноябрь 30",
-            "id_12": "Декабрь 31"
+            "id_1": ["Январь", "31"],
+            "id_2": ["Февраль", "28"],
+            "id_3": ["Март", "31"],
+            "id_4": ["Апрель", "30"],
+            "id_5": ["Май", "31"],
+            "id_6": ["Июнь", "30"],
+            "id_7": ["Июль", "31"],
+            "id_8": ["Август", "31"],
+            "id_9": ["Сентябрь","30"],
+            "id_10": ["Октябрь", "31"],
+            "id_11": ["Ноябрь", "30"],
+            "id_12": ["Декабрь", "31"]
         }
       
     }`,
-
-    
 
 
     GENDER_MALE: 'Мужчина',
@@ -95,13 +93,13 @@ const personGenerator = {
         }  else {
             return femaleJob; // this = jobGenerator
         };
-    },
+    }, 
 
     randomMonth: function (json) {
         const obj = JSON.parse(json);
         const prop = `id_${this.randomIntNumber(obj.count, 1)}`; // this = MonthGenerator
-        const amount = this.randomIntNumber(obj.list[prop].substr(-2), 1) // Day Generation Limit
-        return `${amount} ${obj.list[prop].substr(0, obj.list[prop].length -2)}`;
+        const amount = this.randomIntNumber(obj.list[prop][1], 1) // Day Generation Limit
+        return `${amount} ${obj.list[prop][0]}`;
     },
 
    yeareOfBirth: function() {
@@ -248,7 +246,6 @@ const personJob =  {
             "id_3": "Сварщик",
             "id_4": "Электрик",
             "id_5": "Строитель"
-
         }
     }`,
 };
